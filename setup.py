@@ -98,7 +98,9 @@ setup(
     description='A python wrapper for the ROL package.',
     long_description='',
     ext_modules=[CMakeExtension('ROL')],
-    install_requires=['roltrilinos'],
+    install_requires=[
+        'roltrilinos@git+https://github.com/icepack/Trilinos',
+    ],
     packages=['ROL'],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
